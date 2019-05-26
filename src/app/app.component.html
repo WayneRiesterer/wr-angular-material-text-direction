@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<h1>Text Direction (Angular Material)</h1>
+	</mat-toolbar-row>
+	<mat-toolbar-row>
+		<h2 class="author">Wayne Riesterer (2018)</h2>
+	</mat-toolbar-row>
+</mat-toolbar>
+
+<main>
+	<button mat-raised-button color="accent" (click)="toggleTextDirection()">
+    Toggle Text Direction
+  </button>
+
+	<mat-card>
+		<form [formGroup]="contactForm" fxLayout="column" [dir]="textDirection">
+			<mat-form-field>
+				<input matInput placeholder="Given name" formControlName="givenName">
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput placeholder="Family name" formControlName="familyName">
+			</mat-form-field>
+			<mat-form-field>
+				<input matInput [matDatepicker]="datePicker" placeholder="Date of birth" formControlName="dateOfBirth">
+				<mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+				<mat-datepicker #datePicker></mat-datepicker>
+			</mat-form-field>
+			<mat-form-field class="example-full-width">
+				<input type="tel" matInput placeholder="Telephone" formControlName="phoneNumber">
+				<mat-icon matSuffix>phone</mat-icon>
+			</mat-form-field>
+		</form>
+	</mat-card>
+</main>

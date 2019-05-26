@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
